@@ -1,0 +1,74 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <title>Shopping Basket Project</title>
+    <meta name="description" content="This is the description" />
+    <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <!-- <nav class="main-nav nav"> -->
+      </nav>
+      <h1 class="band-name band-name-large">Your Wine Basket</h1>
+    </header>
+    <section class="container content-section">
+      <div class="shop-items"></div>
+    </section>
+    <section class="container content-section">
+      <h2 class="section-header">CART</h2>
+      <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      </div>
+      <div class="cart-items" style="border: 2px,solid,red;">
+        <!--<div class="cart-row">
+            <div class="cart-item cart-column">
+              <img
+                class="cart-item-image"
+                src="http://localhost/sabzlearn-js/224-explain-of-shopping-basket-project/source/Images/Album%202.png"
+                width="100"
+                height="100"
+              />
+              <span class="cart-item-title">Album 2</span>
+            </div>
+            <span class="cart-price cart-column">$14.99</span>
+            <div class="cart-quantity cart-column">
+              <input class="cart-quantity-input" type="number" value="1" />
+              <button class="btn btn-danger" type="button">REMOVE</button>
+            </div>
+          </div>-->
+      </div>
+      <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+      </div>
+      <button class="btn btn-primary btn-purchase" type="button" onclick="purchase()">
+        PURCHASE
+      </button>
+
+      <script src="{{ url_for('static', filename='js/card.js') }}"></script>
+      <script>
+        function purchase() {
+          // Replace the URL below with your purchase URL
+          window.location.href = "https://rzp.io/l/S11M7zfsk";
+        }
+      </script>
+
+{% for filename in images %}
+<img src="{{ url_for('static', filename='img/' + filename) }}" alt="My Image">
+{% endfor %}
+    </section>
+
+    <footer class="main-footer">
+      <div class="container main-footer-container">
+        <h3 class="band-name" style="align-items: center; justify-content: center; width: 800px; text-align: center;">
+          Enjoy your drink!</h3>
+      </div>
+    </footer>
+
+  </body>
+
+  </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Wine</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-image: url(https://static.vecteezy.com/system/resources/previews/006/660/301/large_2x/red-wine-in-clear-glass-many-blurred-wine-bottle-backgrounds-place-it-on-a-cement-floor-with-a-wooden-board-wall-the-cellar-tasting-production-concept-3d-rendering-free-photo.jpg);
+        }
+        .display{
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+        }
+        table{
+            margin:auto;
+            width: 50%;
+            padding: 20px;
+            border: 3px solid white;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        th, td{
+            padding: 10px;
+            text-align: left;
+            border: 1px solid white;
+        }
+        td{
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="display">
+        <h1>The Quality of Wine is Bad!</h1>
+        <img src="https://thumbs.gfycat.com/AptDifferentGrunion.webp"style="width:250px;height:250px;">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h2>Input Parameters</h2>
+        <table>
+            <tr>
+                <th style="color:red">Parameter</th>
+                <th style="color:red">Value</th>
+            </tr>
+            <tr>
+                <td>Fixed Acidity:</td>
+                <td>{{ input_data[0] }}</td>
+            </tr>
+            <tr>
+                <td>Volatile Acidity:</td>
+                <td>{{ input_data[1] }}</td>
+            </tr>
+            <tr>
+                <td>Citric Acid:</td>
+                <td>{{ input_data[2] }}</td>
+            </tr>
+            <tr>
+                <td>Residual Sugar:</td>
+                <td>{{ input_data[3] }}</td>
+            </tr>
+            <tr>
+                <td>Chlorides:</td>
+                <td>{{ input_data[4] }}</td>
+            </tr>
+            <tr>
+                <td>Free Sulfur Dioxide:</td>
+                <td>{{ input_data[5] }}</td>
+            </tr>
+            <tr>
+                <td>Total Sulfur Dioxide:</td>
+                <td>{{ input_data[6] }}</td>
+            </tr>
+            <tr>
+                <td>Density:</td>
+                <td>{{ input_data[7] }}</td>
+            </tr>
+            <tr>
+                <td>pH:</td>
+                <td>{{ input_data[8] }}</td>
+            </tr>
+            <tr>
+                <td>Sulphates:</td>
+                <td>{{ input_data[9] }}</td>
+            </tr>
+            <tr>
+                <td>Alcohol:</td>
+                <td>{{ input_data[10] }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
